@@ -1,0 +1,8 @@
+web:
+    #build: .
+    ports:
+        - "3000:80"
+    image: yonh/filebrowser-nginx
+    restart: always
+    volumes:
+        - ./:/usr/share/nginx/html
