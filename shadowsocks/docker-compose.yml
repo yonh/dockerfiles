@@ -1,0 +1,5 @@
+shadow:
+  restart: always
+  ports:
+    - 443:443
+  image: yonh/shadowsocks
