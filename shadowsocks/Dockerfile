@@ -4,12 +4,18 @@ ENV REFERSHED_AT 2017-02-10
 
 #replace default sources.list
 ADD sources.list /etc/apk/repositories
+ADD run.sh /run.sh
+ADD config.example /opt/config.example
 
-RUN apk update \
-	&& apk add --no-cache py-pip
-run	pip install shadowsocks
+RUN apk update && \
+	apk add --no-cache py-pip && \
+	pip install shadowsocks && \
+	chmod +x /run.sh
 
-add config /opt/config
+ENV ENV_PASS shadowsocks
+ENV ENV_TIMEOUT 300
+ENV ENV_METHOD rc4-md5
 
-CMD ["ssserver", "-c", "/opt/config"]
+
+CMD ["/run.sh"]
 

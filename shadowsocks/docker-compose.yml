@@ -3,3 +3,7 @@ shadow:
   ports:
     - 443:443
   image: yonh/shadowsocks
+  environment:
+    - ENV_PASS=shadowsocks
+    - ENV_TIMEOUT=300
+    - ENV_METHOD=rc4-md5
