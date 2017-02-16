@@ -13,7 +13,7 @@ docker-compose up -d
 
 ## run for docker
 ```
-docker run -d --name shadow -p 443:443 -e ENV_PASS=12345 -e ENV_METHOD=rc4-md5 yonh/shadowsocks
+docker run -d --name shadow --restart=always -p 443:443 -e ENV_PASS=12345 -e ENV_METHOD=rc4-md5 yonh/shadowsocks
 ```
 
 ## your client config
