@@ -13,6 +13,6 @@ docker-compose up -d
 
 ## run for docker
 ```
-docker run -d --name whistle --restart=always -p 7788:7788 yonh/whistle
+docker run -d --name whistle --restart=always -p 8899:8899 yonh/whistle
 ```
 
