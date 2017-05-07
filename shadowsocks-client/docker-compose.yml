@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  shadow-cli-1080:
+    build: .
+    restart: always
+    container_name: shadowsocks-cli-1080
+    ports:
+      - 1080:1080
+    image: yonh/shadowsocks-client
+    volumes:
+      - ./config.example:/opt/config.json
