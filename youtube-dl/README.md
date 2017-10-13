@@ -3,7 +3,7 @@ youtube-dl image
 
 ```
 docker build -t yonh/youtube-dl .
-# or download
+# you can also use docker pull
 docker pull yonh/youtube-dl
 ```
 
