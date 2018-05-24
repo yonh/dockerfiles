@@ -3,7 +3,7 @@ MAINTAINER Yonh Lai <azssjli@163.com>
 LABEL Description="A Simple apache/php image using alpine Linux for Web Apps"
 
 #replace default sources.list
-ADD sources.list /etc/apk/repositories
+#ADD sources.list /etc/apk/repositories
 
 
 # Setup apache and php
