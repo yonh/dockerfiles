@@ -13,12 +13,12 @@ vi ~/.config/fish/config.fish
 
 ```
 function yarn
-        docker run -it --rm -v $PWD:/opt yonh/yarn yarn $argv
+    docker run -it --rm -v ~/.cache/yarn:/usr/local/share/.cache/yarn -v $PWD:/opt yonh/yarn yarn $argv
 end
 ```
 
 set your bash alias yarn
 ```
-alias yarn="docker run -it --rm -v $PWD:/opt yonh/yarn yarn"
+alias yarn="docker run -it --rm -v ~/.cache/yarn:/usr/local/share/.cache/yarn -v $PWD:/opt yonh/yarn yarn"
 ```
 
