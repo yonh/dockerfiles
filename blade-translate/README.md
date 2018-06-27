@@ -2,7 +2,7 @@
 blade-translate image
 
 ```
-docker build -t yonh/blade-translate
+docker build -t yonh/blade-translate .
 # you can also use docker pull
 docker pull yonh/blade-translate
 ```
@@ -11,18 +11,18 @@ docker pull yonh/blade-translate
 
 ### set command alias
 
-set your fish alias dl
+set your fish alias function
 vi ~/.config/fish/config.fish
 
 ```
-function thc
-        docker run -it --rm yonh/blade-translate thc $argv
+function tr
+        docker run -it --rm yonh/blade-translate bt $argv
 end
 ```
 
-set your bash alias dl
+set your bash alias function
 ```
-alias thc="docker run -it --rm yonh/blade-translate thc"
+alias tr="docker run -it --rm yonh/blade-translate bt"
 ```
 
 
@@ -32,6 +32,6 @@ alias thc="docker run -it --rm yonh/blade-translate thc"
 and then you can command thc, e.g.
 
 ```
-thc
-thc pig
+tr
+tr I am a stupid man
 ```
