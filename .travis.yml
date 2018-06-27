@@ -1,0 +1,22 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - docker pull alpine:3.7
+
+script:
+  - cd blade-translate && docker build -t yonh/blade-translate .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push yonh/blade-translate
+
+#deploy:
+#  provider: script
+#  script: bash docker_push
+#  on:
+#    branch: master
+
+
