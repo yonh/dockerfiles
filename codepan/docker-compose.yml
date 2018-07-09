@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  codepan:
+    build: ./
+    container_name: codepan
+    ports:
+        - "4000:4000"
+    image: yonh/codepan
+    restart: always
+
