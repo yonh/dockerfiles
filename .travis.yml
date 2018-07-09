@@ -9,9 +9,9 @@ before_install:
   - docker pull alpine:3.7
 
 script:
-  - cd blade-translate && docker build -t yonh/blade-translate .
+  - cd codepan && docker build -t yonh/codepan .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push yonh/blade-translate
+  - docker push yonh/codepan
 
 #deploy:
 #  provider: script
