@@ -8,5 +8,23 @@ services:
     ports:
       - 1080:1080
     image: yonh/shadowsocks-client
-    volumes:
-      - ./config.example:/opt/config.json
+#    volumes:
+#      - ./config.1080:/opt/config.json
+#  shadow-cli-1081:
+#    build: .
+#    restart: always
+#    container_name: shadowsocks-cli-1081
+#    ports:
+#      - 1081:1080
+#    image: yonh/shadowsocks-client
+#    volumes:
+#      - ./config.1081:/opt/config.json
+#  shadow-cli-1082:
+#    build: .
+#    restart: always
+#    container_name: shadowsocks-cli-1082
+#    ports:
+#      - 1082:1080
+#    image: yonh/shadowsocks-client
+#    volumes:
+#      - ./config.1082:/opt/config.json

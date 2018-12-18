@@ -11,7 +11,7 @@ RUN apk update && \
 	apk add --no-cache py-pip && \
 	pip install shadowsocks && \
 	chmod +x /run.sh
-
+ADD config.json /opt/config.json
 ENV ENV_PASS shadowsocks
 ENV ENV_TIMEOUT 300
 ENV ENV_METHOD rc4-md5

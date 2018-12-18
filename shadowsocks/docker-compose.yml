@@ -1,7 +1,7 @@
 shadow:
   restart: always
   ports:
-    - 443:443
+    - 4443:443/udp
   image: yonh/shadowsocks
   environment:
     - ENV_PASS=shadowsocks
