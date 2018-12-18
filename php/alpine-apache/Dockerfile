@@ -15,6 +15,10 @@ RUN apk --update add apache2 php7-apache2 curl \
     && sed -i 's/#LoadModule\ rewrite_module/LoadModule\ rewrite_module/' /etc/apache2/httpd.conf \
     && mkdir -p /opt/utils \
     && sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 10M/g' /etc/php7/php.ini
+# resolves iconv error
+ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
+RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing gnu-libiconv
+
     
 ADD start.sh /opt/utils/
 RUN chmod +x /opt/utils/start.sh
