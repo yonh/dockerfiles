@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  app:
+    container_name: app
+    ports:
+    - "80:80"
+    image: yonh/php:alpine-apache-dev
+    restart: always
+    volumes:
+    - .:/app
+    environment:
+    - WEBAPP_ROOT=public
+    - TZ="Asia/Shanghai"
+
